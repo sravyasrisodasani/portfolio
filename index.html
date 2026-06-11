@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sravya Sri Sodasani — Data Science & AI</title>
+  <meta name="description" content="Portfolio of Sravya Sri Sodasani — Data Science, AI, Machine Learning, Analytics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Canvas Background -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ═══════════════════════════════════ NAVBAR ═══════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">sravya<span class="accent">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#dashboards">Dashboards</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#beyond">Beyond Tech</a></li>
+      <li><a href="#hackathons">Events</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span>Open to Opportunities</div>
+      <h1 class="hero-title">
+        <span class="hero-name-line">Sravya Sri</span>
+        <span class="hero-name-line gradient-text">Sodasani</span>
+      </h1>
+      <p class="hero-roles">
+        <span class="role-item">Data Science</span>
+        <span class="role-sep">·</span>
+        <span class="role-item">Machine Learning</span>
+        <span class="role-sep">·</span>
+        <span class="role-item">Analytics</span>
+        <span class="role-sep">·</span>
+        <span class="role-item">AI Products</span>
+      </p>
+      <p class="hero-tagline">
+        Transforming ideas into intelligent products through AI,<br class="br-desk" /> analytics, and modern technology.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary"><i class="fas fa-rocket"></i> View My Work</a>
+        <a href="#contact" class="btn-ghost">Contact Me</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/sravyasrisodasani" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/sravyasrisodasani" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        <a href="mailto:sravyasrisodasani@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="profile-ring">
+        <div class="profile-inner">
+          <img src="photo.jpeg" alt="Sravya Sri Sodasani" class="profile-photo" />
+        </div>
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+      </div>
+      <div class="float-chip chip-a"><i class="fab fa-python"></i> Python</div>
+      <div class="float-chip chip-b"><i class="fas fa-brain"></i> ML / AI</div>
+      <div class="float-chip chip-c"><i class="fas fa-chart-bar"></i> Power BI</div>
+      <div class="float-chip chip-d"><i class="fas fa-database"></i> SQL</div>
+    </div>
+    <div class="hero-scroll"><span></span>Scroll</div>
+  </section>
+
+  <!-- ═══════════════════════════════════ ABOUT ═══════════════════════════════════ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">// 01 — ABOUT</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a <strong>B.Tech Computer Science (Data Science)</strong> student at G. Narayanamma Institute of Technology and Science, Hyderabad — previously completed a Diploma in <strong>AI & Machine Learning</strong> with a CGPA of 9.54.</p>
+          <p>I build AI products, machine learning models, analytics dashboards, and real-world client websites. My work spans from NLP classifiers achieving 97%+ accuracy to Power BI dashboards delivering business insights.</p>
+          <p>I've participated in <strong>7+ hackathons</strong>, attended 5+ workshops, completed internships, and delivered a paid client project — all while maintaining academic excellence.</p>
+          <div class="stats-row">
+            <div class="stat-box"><div class="stat-num gradient-text">9.54</div><div class="stat-label">Diploma CGPA</div></div>
+            <div class="stat-box"><div class="stat-num gradient-text">7+</div><div class="stat-label">Hackathons</div></div>
+            <div class="stat-box"><div class="stat-num gradient-text">10+</div><div class="stat-label">Projects</div></div>
+            <div class="stat-box"><div class="stat-num gradient-text">1</div><div class="stat-label">Client Project</div></div>
+          </div>
+        </div>
+        <div class="about-edu">
+          <div class="edu-card">
+            <div class="edu-year cyan-glow">2028</div>
+            <div class="edu-info">
+              <h3>B.Tech — CS (Data Science)</h3>
+              <p>G. Narayanamma Institute of Technology and Science</p>
+              <span>Hyderabad · 2025 – 2028</span>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-year pink-glow">2025</div>
+            <div class="edu-info">
+              <h3>Diploma — AI & Machine Learning</h3>
+              <p>Government Institute of Electronics, Hyderabad</p>
+              <span>2022 – 2025 · CGPA 9.54</span>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-year green-glow">2025</div>
+            <div class="edu-info">
+              <h3>Secondary School Education</h3>
+              <p>Blooming Dales High School</p>
+              <span>2025 · CGPA 9.8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ EXPERIENCE ═══════════════════════════════════ -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-label">// 02 — EXPERIENCE</div>
+      <h2 class="section-title">Work & Training</h2>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-marker cyan-marker"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3>Web Developer <span class="tl-sep">·</span> <span class="accent-text">Mee Panthulu</span></h3>
+                <p class="tl-type"><span class="badge-paid">Paid Client Project</span></p>
+              </div>
+              <span class="tl-date">2025 – 2026</span>
+            </div>
+            <p class="tl-desc">Designed and developed a complete professional business website for a real client, focusing on user experience, responsive design, and digital presence.</p>
+            <div class="tl-highlights">
+              <span><i class="fas fa-check"></i> Requirement Analysis & UI/UX Design</span>
+              <span><i class="fas fa-check"></i> Frontend Development & Responsive Layout</span>
+              <span><i class="fas fa-check"></i> Performance Optimization & Deployment</span>
+              <span><i class="fas fa-check"></i> Service Showcase, Contact Forms, SEO</span>
+            </div>
+            <div class="tl-chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-marker pink-marker"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3>ML / NLP Intern <span class="tl-sep">·</span> <span class="accent-text">AptPath</span></h3>
+                <p class="tl-type"><span class="badge-intern">Internship · Virtual</span></p>
+              </div>
+              <span class="tl-date">Nov 2025 – Apr 2026</span>
+            </div>
+            <p class="tl-desc">Built production-level NLP models and currently developing the Voxform AI project. Worked on text classification pipelines using scikit-learn and TF-IDF.</p>
+            <div class="tl-highlights">
+              <span><i class="fas fa-check"></i> Hate Speech Detection — ~96% accuracy</span>
+              <span><i class="fas fa-check"></i> TF-IDF + Logistic Regression pipeline</span>
+              <span><i class="fas fa-check"></i> Text preprocessing & classification</span>
+              <span><i class="fas fa-check"></i> Currently: Voxform project</span>
+            </div>
+            <div class="tl-chips"><span>Python</span><span>NLP</span><span>Scikit-learn</span><span>TF-IDF</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-marker green-marker"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3>Cloud & DevOps Training <span class="tl-sep">·</span> <span class="accent-text">SVGS</span></h3>
+                <p class="tl-type"><span class="badge-train">Industrial Training · Offline</span></p>
+              </div>
+              <span class="tl-date">Nov 2024 – Apr 2025</span>
+            </div>
+            <p class="tl-desc">Hands-on training in cloud technologies and DevOps practices, covering AWS services, cloud deployment strategies, and CI/CD fundamentals.</p>
+            <div class="tl-highlights">
+              <span><i class="fas fa-check"></i> AWS Services & Cloud Deployment</span>
+              <span><i class="fas fa-check"></i> CI/CD Pipeline Fundamentals</span>
+            </div>
+            <div class="tl-chips"><span>AWS</span><span>Cloud</span><span>DevOps</span><span>CI/CD</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FEATURED PROJECTS ═══════════════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-label">// 03 — WORKS</div>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-sub">Click any project to explore the full case study.</p>
+
+      <!-- Featured Row -->
+      <div class="featured-row">
+        <div class="featured-card" onclick="openProject('startupiq')">
+          <div class="feat-glow glow-cyan"></div>
+          <div class="feat-top">
+            <span class="feat-tag cyan-tag">AI Product</span>
+            <span class="feat-num">01</span>
+          </div>
+          <h3>StartupIQ AI</h3>
+          <p>AI-powered startup intelligence platform that analyzes market trends, validates business ideas, and provides startup insights using NLP and ML models.</p>
+          <div class="feat-chips"><span>Python</span><span>ML</span><span>NLP</span><span>React</span><span>FastAPI</span></div>
+          <div class="feat-footer"><span class="feat-status status-done">● Completed</span><span class="feat-cta">View Case Study →</span></div>
+        </div>
+
+        <div class="featured-card" onclick="openProject('roadsos')">
+          <div class="feat-glow glow-pink"></div>
+          <div class="feat-top">
+            <span class="feat-tag pink-tag">Emergency AI</span>
+            <span class="feat-num">02</span>
+          </div>
+          <h3>RoadSOS AI</h3>
+          <p>Smart emergency response platform enabling instant accident reporting, real-time GPS sharing, hospital recommendations, and rapid assistance coordination.</p>
+          <div class="feat-chips"><span>React</span><span>Python</span><span>Firebase</span><span>Maps API</span><span>ML</span></div>
+          <div class="feat-footer"><span class="feat-status status-done">● Completed</span><span class="feat-cta">View Case Study →</span></div>
+        </div>
+      </div>
+
+      <!-- Mini Projects Grid -->
+      <h3 class="sub-section-title">More Projects</h3>
+      <div class="projects-grid">
+
+        <div class="proj-card" onclick="openProject('hatespeech')">
+          <div class="proj-num-badge">03</div>
+          <span class="proj-mini-tag cyan-tag">NLP</span>
+          <h4>Hate Speech Detection</h4>
+          <p>NLP model using Logistic Regression + TF-IDF achieving ~96% accuracy. Built during AptPath internship.</p>
+          <div class="proj-chips"><span>Python</span><span>NLP</span><span>Scikit-learn</span></div>
+          <span class="proj-open">→</span>
+        </div>
+
+        <div class="proj-card" onclick="openProject('spam')">
+          <div class="proj-num-badge">04</div>
+          <span class="proj-mini-tag pink-tag">ML</span>
+          <h4>Spam Classifier</h4>
+          <p>Email/SMS spam detection using Naive Bayes + TF-IDF achieving 97–98% accuracy with Streamlit UI.</p>
+          <div class="proj-chips"><span>Python</span><span>Streamlit</span><span>NLP</span></div>
+          <span class="proj-open">→</span>
+        </div>
+
+        <div class="proj-card" onclick="openProject('movies')">
+          <div class="proj-num-badge">05</div>
+          <span class="proj-mini-tag green-tag">ML</span>
+          <h4>Movie Recommender</h4>
+          <p>Content-based filtering using cosine similarity on a 5000+ movie dataset for personalized picks.</p>
+          <div class="proj-chips"><span>Python</span><span>Pandas</span><span>Cosine Similarity</span></div>
+          <span class="proj-open">→</span>
+        </div>
+
+        <div class="proj-card" onclick="openProject('health')">
+          <div class="proj-num-badge">06</div>
+          <span class="proj-mini-tag orange-tag">Healthcare AI</span>
+          <h4>Health Advisor</h4>
+          <p>Random Forest model predicting diseases from symptoms with health recommendations. Diploma Major Project.</p>
+          <div class="proj-chips"><span>Python</span><span>Random Forest</span><span>Scikit-learn</span></div>
+          <span class="proj-open">→</span>
+        </div>
+
+        <div class="proj-card" onclick="openProject('leaderboard')">
+          <div class="proj-num-badge">07</div>
+          <span class="proj-mini-tag purple-tag">Full Stack</span>
+          <h4>Coding Leaderboard</h4>
+          <p>Live leaderboard aggregating coding stats across platforms with rankings and performance tracking.</p>
+          <div class="proj-chips"><span>Python</span><span>Full Stack</span><span>UI/UX</span></div>
+          <span class="proj-open">→</span>
+        </div>
+
+        <div class="proj-card" onclick="openProject('canteen')">
+          <div class="proj-num-badge">08</div>
+          <span class="proj-mini-tag cyan-tag">Web App</span>
+          <h4>Smart Canteen System</h4>
+          <p>Digital canteen with student ordering dashboard and admin analytics panel for inventory and sales tracking.</p>
+          <div class="proj-chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <span class="proj-open">→</span>
+        </div>
+
+        <div class="proj-card" onclick="openProject('food')">
+          <div class="proj-num-badge">09</div>
+          <span class="proj-mini-tag pink-tag">Web App</span>
+          <h4>Food Ordering System</h4>
+          <p>Group project for online ordering, payment processing, and receipt generation. Improved efficiency significantly.</p>
+          <div class="proj-chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <span class="proj-open">→</span>
+        </div>
+
+        <div class="proj-card" onclick="openProject('meepanthulu')">
+          <div class="proj-num-badge">10</div>
+          <span class="proj-mini-tag green-tag">Paid Client · React</span>
+          <h4>Mee Panthulu</h4>
+          <p>Full-stack pooja booking platform in 4 languages. Pandit profiles, admin panel, JWT auth, printable receipts. Deployed on Vercel + Render + Neon.</p>
+          <div class="proj-chips"><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
+          <span class="proj-open">→</span>
+        </div>
+
+        <div class="proj-card" onclick="openProject('valkey')">
+          <div class="proj-num-badge">11</div>
+          <span class="proj-mini-tag orange-tag">Amazon Hackathon</span>
+          <h4>Valkey E-Commerce Demo</h4>
+          <p>Full e-commerce React frontend built for "Build Beyond Limits" hackathon at Amazon, showcasing Valkey capabilities across 14 backend subsystems.</p>
+          <div class="proj-chips"><span>React</span><span>Valkey</span><span>Docker</span></div>
+          <span class="proj-open">→</span>
+        </div>
+
+        <div class="proj-card" onclick="openProject('zomathon')">
+          <div class="proj-num-badge">12</div>
+          <span class="proj-mini-tag pink-tag">ML · Zomathon</span>
+          <h4>Smart Add-On Recommender</h4>
+          <p>Context-aware real-time add-on recommendation system for food delivery. Two-stage LightGBM ranking pipeline. Projected ₹18M/day revenue lift.</p>
+          <div class="proj-chips"><span>LightGBM</span><span>Python</span><span>ML</span></div>
+          <span class="proj-open">→</span>
+        </div>
+
+        <div class="proj-card" onclick="openProject('iith')">
+          <div class="proj-num-badge">13</div>
+          <span class="proj-mini-tag purple-tag">FinTech · IIT Hyderabad</span>
+          <h4>Intelli Credit — Credit Risk AI</h4>
+          <p>Explainable AI-powered credit risk assessment prototype. Classification models with feature engineering and XAI for transparent lending decisions.</p>
+          <div class="proj-chips"><span>Python</span><span>XAI</span><span>Scikit-learn</span></div>
+          <span class="proj-open">→</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ DASHBOARDS ═══════════════════════════════════ -->
+  <section class="section section-alt" id="dashboards">
+    <div class="container">
+      <div class="section-label">// 04 — ANALYTICS</div>
+      <h2 class="section-title">Analytics Dashboards</h2>
+      <p class="section-sub">Power BI dashboards delivering real business and historical insights.</p>
+      <div class="dash-grid">
+
+        <div class="dash-card" onclick="openProject('hrdb')">
+          <div class="dash-preview" onclick="event.stopPropagation()">
+            <div class="slider" id="slider-hr">
+              <div class="slides">
+                <img src="hr-dashboard-1.jpeg" alt="HR Dashboard 1" class="dash-img"/>
+                <img src="hr-dashboard-2.jpeg" alt="HR Dashboard 2" class="dash-img"/>
+                <img src="hr-dashboard-3.jpeg" alt="HR Dashboard 3" class="dash-img"/>
+                <img src="hr-dashboard-4.jpeg" alt="HR Dashboard 4" class="dash-img"/>
+              </div>
+              <button class="sl-btn sl-prev" onclick="slideMove('slider-hr',-1)">&#8249;</button>
+              <button class="sl-btn sl-next" onclick="slideMove('slider-hr',1)">&#8250;</button>
+              <div class="sl-dots" id="dots-slider-hr"></div>
+            </div>
+          </div>
+          <div class="dash-info">
+            <span class="dash-tag cyan-tag">Power BI</span>
+            <h3>HR Analytics Dashboard</h3>
+            <p>Employee attrition analysis, hiring insights, workforce trends, and performance metrics for data-driven HR decisions.</p>
+            <div class="dash-chips"><span>Power BI</span><span>SQL</span><span>Excel</span></div>
+            <span class="dash-cta">View Details →</span>
+          </div>
+        </div>
+
+        <div class="dash-card" onclick="openProject('wwdb')">
+          <div class="dash-preview" onclick="event.stopPropagation()">
+            <div class="slider" id="slider-ww">
+              <div class="slides">
+                <img src="worldwar-dashboard-1.png" alt="World War Dashboard 1" class="dash-img"/>
+                <img src="worldwar-dashboard-2.png" alt="World War Dashboard 2" class="dash-img"/>
+                <img src="worldwar-dashboard-3.png" alt="World War Dashboard 3" class="dash-img"/>
+                <img src="worldwar-dashboard-4.png" alt="World War Dashboard 4" class="dash-img"/>
+                <img src="worldwar-dashboard-5.png" alt="World War Dashboard 5" class="dash-img"/>
+              </div>
+              <button class="sl-btn sl-prev" onclick="slideMove('slider-ww',-1)">&#8249;</button>
+              <button class="sl-btn sl-next" onclick="slideMove('slider-ww',1)">&#8250;</button>
+              <div class="sl-dots" id="dots-slider-ww"></div>
+            </div>
+          </div>
+          <div class="dash-info">
+            <span class="dash-tag orange-tag">Hackathon · Decode & Display 2026</span>
+            <h3>Global Ripple Effects Dashboard</h3>
+            <p>"How War Impacts the World Economy" — America-Iran War 2025. 5-page dashboard across 28 countries. Oil +84%, Net Loss -$2,826B. Team: Data Detectives · SMS, Univ. of Hyderabad.</p>
+            <div class="dash-chips"><span>Power BI</span><span>Python</span><span>SQL</span></div>
+            <span class="dash-cta">View Details →</span>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ SKILLS ═══════════════════════════════════ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-label">// 05 — SKILLS</div>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <div class="sg-header"><i class="fas fa-code cyan"></i><h4>Programming</h4></div>
+          <div class="sg-chips">
+            <span class="sc cyan-chip">Python</span>
+            <span class="sc cyan-chip">Java</span>
+            <span class="sc cyan-chip">C</span>
+            <span class="sc cyan-chip">C++</span>
+            <span class="sc cyan-chip">SQL</span>
+            <span class="sc cyan-chip">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="sg-header"><i class="fas fa-brain pink"></i><h4>Machine Learning</h4></div>
+          <div class="sg-chips">
+            <span class="sc pink-chip">Scikit-learn</span>
+            <span class="sc pink-chip">Pandas</span>
+            <span class="sc pink-chip">NumPy</span>
+            <span class="sc pink-chip">NLP</span>
+            <span class="sc pink-chip">TF-IDF</span>
+            <span class="sc pink-chip">Random Forest</span>
+            <span class="sc pink-chip">TensorFlow</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="sg-header"><i class="fas fa-chart-pie green"></i><h4>Data & Analytics</h4></div>
+          <div class="sg-chips">
+            <span class="sc green-chip">Power BI</span>
+            <span class="sc green-chip">Excel</span>
+            <span class="sc green-chip">Matplotlib</span>
+            <span class="sc green-chip">Data Cleaning</span>
+            <span class="sc green-chip">Data Analysis</span>
+            <span class="sc green-chip">Visualization</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="sg-header"><i class="fas fa-tools orange"></i><h4>Tools & Platforms</h4></div>
+          <div class="sg-chips">
+            <span class="sc orange-chip">Streamlit</span>
+            <span class="sc orange-chip">Jupyter</span>
+            <span class="sc orange-chip">Git / GitHub</span>
+            <span class="sc orange-chip">Figma</span>
+            <span class="sc orange-chip">HTML / CSS</span>
+            <span class="sc orange-chip">React</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="skill-icons">
+        <div class="si"><i class="fab fa-python" style="color:#3b82f6"></i><span>Python</span></div>
+        <div class="si"><i class="fas fa-database" style="color:#06b6d4"></i><span>SQL</span></div>
+        <div class="si"><i class="fab fa-java" style="color:#f97316"></i><span>Java</span></div>
+        <div class="si"><i class="fab fa-js" style="color:#eab308"></i><span>JavaScript</span></div>
+        <div class="si"><i class="fas fa-brain" style="color:#ec4899"></i><span>ML/AI</span></div>
+        <div class="si"><i class="fas fa-chart-bar" style="color:#f59e0b"></i><span>Power BI</span></div>
+        <div class="si"><i class="fab fa-github" style="color:#a78bfa"></i><span>GitHub</span></div>
+        <div class="si"><i class="fab fa-html5" style="color:#f97316"></i><span>HTML5</span></div>
+        <div class="si"><i class="fab fa-css3-alt" style="color:#3b82f6"></i><span>CSS3</span></div>
+        <div class="si"><i class="fas fa-stream" style="color:#10b981"></i><span>Streamlit</span></div>
+        <div class="si"><i class="fab fa-react" style="color:#06b6d4"></i><span>React</span></div>
+        <div class="si"><i class="fas fa-fire" style="color:#f97316"></i><span>Firebase</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ WORKSHOPS ═══════════════════════════════════ -->
+  <section class="section section-alt" id="workshops">
+    <div class="container">
+      <div class="section-label">// 06 — LEARNING</div>
+      <h2 class="section-title">Workshops & Development</h2>
+      <div class="workshop-grid">
+
+        <div class="ws-card">
+          <div class="ws-icon" style="background:rgba(6,182,212,0.12);color:var(--cyan)"><i class="fas fa-server"></i></div>
+          <h4>React Hyderabad Meetup #5</h4>
+          <p class="ws-sub">Powering AI Apps with Valkey</p>
+          <div class="ws-tags"><span>In-Memory Databases</span><span>Caching Systems</span><span>AI Apps</span><span>Performance</span></div>
+        </div>
+
+        <div class="ws-card">
+          <div class="ws-icon" style="background:rgba(236,72,153,0.12);color:var(--pink)"><i class="fas fa-chart-bar"></i></div>
+          <h4>Power BI Bootcamp</h4>
+          <p class="ws-sub">4-Day Intensive · 2026</p>
+          <div class="ws-tags"><span>Power BI</span><span>DAX</span><span>Data Modeling</span><span>Visualization</span></div>
+        </div>
+
+        <div class="ws-card">
+          <div class="ws-icon" style="background:rgba(16,185,129,0.12);color:var(--green)"><i class="fab fa-figma"></i></div>
+          <h4>Figma Workshop</h4>
+          <p class="ws-sub">UI/UX Prototyping · 1 Day · 2026</p>
+          <div class="ws-tags"><span>UI Design</span><span>Wireframing</span><span>Prototyping</span><span>Design Systems</span></div>
+        </div>
+
+
+
+        <div class="ws-card">
+          <div class="ws-icon" style="background:rgba(249,115,22,0.12);color:var(--orange)"><i class="fab fa-java"></i></div>
+          <h4>Java Bootcamp</h4>
+          <p class="ws-sub">Core Java & OOP · 3 Days · 2025</p>
+          <div class="ws-tags"><span>Core Java</span><span>OOP</span><span>Data Structures</span></div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ HACKATHONS ═══════════════════════════════════ -->
+  <section class="section" id="hackathons">
+    <div class="container">
+      <div class="section-label">// 07 — COMPETITIONS</div>
+      <h2 class="section-title">Hackathons</h2>
+      <div class="hack-timeline">
+
+        <div class="hack-item">
+          <div class="hack-year" style="background:linear-gradient(135deg,#f97316,#f59e0b)">2026</div>
+          <div class="hack-card">
+            <h4>Build Beyond Limits with Valkey</h4>
+            <p>Amazon HYD13 Campus · Offline · E-Commerce with Valkey</p>
+            <div class="hack-chips"><span>Amazon</span><span>Valkey</span><span>Offline</span><span>E-Commerce</span></div>
+          </div>
+        </div>
+
+        <div class="hack-item">
+          <div class="hack-year" style="background:linear-gradient(135deg,#7c3aed,#ec4899)">2026</div>
+          <div class="hack-card">
+            <h4>Summer SaaS Hackathon</h4>
+            <p>BITS Pilani · Offline · StartupIQ AI · <span style="color:var(--green);font-weight:600">Top 5 — Finals Upcoming</span></p>
+            <div class="hack-chips"><span>SaaS</span><span>AI Product</span><span>Top 5</span><span>Grand Finale</span></div>
+          </div>
+        </div>
+
+        <div class="hack-item">
+          <div class="hack-year" style="background:linear-gradient(135deg,#ec4899,#a78bfa)">2026</div>
+          <div class="hack-card">
+            <h4>RoadSoS — National Road Safety Hackathon</h4>
+            <p>IIT Madras · CoERS & RBG Labs · Online · <span style="color:var(--orange);font-weight:600">Results Awaited</span></p>
+            <div class="hack-chips"><span>IIT Madras</span><span>AI in Road Safety</span><span>Online</span></div>
+          </div>
+        </div>
+
+        <div class="hack-item">
+          <div class="hack-year" style="background:linear-gradient(135deg,#06b6d4,#7c3aed)">2026</div>
+          <div class="hack-card">
+            <h4>Decode &amp; Display — TVASTR'26</h4>
+            <p>Data Visualization Challenge · Online · Solo</p>
+            <div class="hack-chips"><span>Power BI</span><span>Data Viz</span><span>Solo</span></div>
+          </div>
+        </div>
+
+        <div class="hack-item">
+          <div class="hack-year" style="background:linear-gradient(135deg,#10b981,#06b6d4)">2026</div>
+          <div class="hack-card">
+            <h4>Power BI Hackathon</h4>
+            <p>GNITS · Offline · 3 Hours</p>
+            <div class="hack-chips"><span>Power BI</span><span>Analytics</span><span>Offline</span></div>
+          </div>
+        </div>
+
+        <div class="hack-item">
+          <div class="hack-year" style="background:linear-gradient(135deg,#f59e0b,#f97316)">2026</div>
+          <div class="hack-card">
+            <h4>Zomathon Hackathon</h4>
+            <p>Online · Smart Add-On Recommendation System · LightGBM</p>
+            <div class="hack-chips"><span>ML</span><span>RecSys</span><span>LightGBM</span><span>Online</span></div>
+          </div>
+        </div>
+
+        <div class="hack-item">
+          <div class="hack-year" style="background:linear-gradient(135deg,#ec4899,#a78bfa)">2026</div>
+          <div class="hack-card">
+            <h4>Yuvaan — IIT Hyderabad</h4>
+            <p>Intelli Credit Challenge · Online · Credit Risk AI Prototype</p>
+            <div class="hack-chips"><span>IIT Hyderabad</span><span>FinTech</span><span>XAI</span><span>Online</span></div>
+          </div>
+        </div>
+
+        <div class="hack-item">
+          <div class="hack-year" style="background:linear-gradient(135deg,#06b6d4,#10b981)">2025</div>
+          <div class="hack-card">
+            <h4>NASA Space Apps Challenge</h4>
+            <p>GNITS · Offline · 24hr · Waste Management</p>
+            <div class="hack-chips"><span>NASA</span><span>24hr</span><span>Offline</span><span>Sustainability</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ CONTACT ═══════════════════════════════════ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-label">// 08 — CONTACT</div>
+      <h2 class="section-title" style="text-align:center">Let's Connect</h2>
+      <p class="section-sub" style="text-align:center">Open to internships, collaborations, hackathon teams, and full-time opportunities.</p>
+      <div class="contact-centered">
+        <a href="mailto:sravyasrisodasani@gmail.com" class="contact-link">
+          <div class="cl-icon" style="background:rgba(6,182,212,0.1);color:var(--cyan)"><i class="fas fa-envelope"></i></div>
+          <div><h4>Email</h4><p>sravyasrisodasani@gmail.com</p></div>
+        </a>
+        <a href="tel:+919063934713" class="contact-link">
+          <div class="cl-icon" style="background:rgba(236,72,153,0.1);color:var(--pink)"><i class="fas fa-phone"></i></div>
+          <div><h4>Phone</h4><p>+91 9063934713</p></div>
+        </a>
+        <a href="https://www.linkedin.com/in/sravyasrisodasani" target="_blank" rel="noopener" class="contact-link">
+          <div class="cl-icon" style="background:rgba(16,185,129,0.1);color:var(--green)"><i class="fab fa-linkedin-in"></i></div>
+          <div><h4>LinkedIn</h4><p>linkedin.com/in/sravyasrisodasani</p></div>
+        </a>
+        <a href="https://github.com/sravyasrisodasani" target="_blank" rel="noopener" class="contact-link">
+          <div class="cl-icon" style="background:rgba(249,115,22,0.1);color:var(--orange)"><i class="fab fa-github"></i></div>
+          <div><h4>GitHub</h4><p>github.com/sravyasrisodasani</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">sravya<span class="accent">.</span></div>
+      <p>Data Science · AI · Analytics · Web</p>
+      <div class="footer-links">
+        <a href="https://github.com/sravyasrisodasani" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sravyasrisodasani" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:sravyasrisodasani@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">© 2026 Sravya Sri Sodasani. Built with passion.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════ PROJECT MODAL ═══════════════════════════════════ -->
+  <div class="modal-backdrop" id="modalBackdrop" onclick="closeProject()"></div>
+  <div class="modal-panel" id="modalPanel">
+    <button class="modal-x" onclick="closeProject()">✕</button>
+    <div class="modal-scroll">
+      <div class="modal-tag-line" id="mTag"></div>
+      <h2 class="modal-title" id="mTitle"></h2>
+      <p class="modal-overview" id="mOverview"></p>
+      <div class="modal-meta-row" id="mMeta"></div>
+      <div class="modal-two-col">
+        <div class="modal-block">
+          <h4><span class="block-icon">💡</span> The Problem</h4>
+          <p id="mProblem"></p>
+        </div>
+        <div class="modal-block">
+          <h4><span class="block-icon">🚀</span> The Solution</h4>
+          <p id="mSolution"></p>
+        </div>
+      </div>
+      <div class="modal-block full-width" id="mFeaturesBlock">
+        <h4><span class="block-icon">⚡</span> Key Features</h4>
+        <ul class="modal-features" id="mFeatures"></ul>
+      </div>
+      <div class="modal-block full-width">
+        <h4><span class="block-icon">⚙️</span> Tech Stack</h4>
+        <div class="modal-tech" id="mTech"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

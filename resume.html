@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sravya Sri Sodasani — Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      background: #f0f2f5;
+      color: #1a1a2e;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: #ffffff;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: linear-gradient(135deg, #0f0f1e 0%, #1a1040 50%, #0f1e1e 100%);
+      padding: 28px 36px 24px;
+      color: white;
+    }
+    .header-top { display: flex; justify-content: space-between; align-items: flex-start; }
+    .header-name h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+    }
+    .header-name h1 span { color: #06b6d4; }
+    .header-name .tagline {
+      font-size: 12px;
+      color: rgba(255,255,255,0.65);
+      font-weight: 400;
+      margin-top: 4px;
+      letter-spacing: 0.3px;
+    }
+    .header-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+    .header-contact a, .header-contact span {
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .header-contact a:hover { color: #06b6d4; }
+    .contact-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #06b6d4;
+      display: inline-block;
+    }
+    .header-roles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+    .role-pill {
+      background: rgba(6,182,212,0.15);
+      border: 1px solid rgba(6,182,212,0.4);
+      color: #67e8f9;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 10.5px;
+      font-weight: 500;
+    }
+
+    /* ── BODY ── */
+    .body { display: flex; flex: 1; }
+
+    /* ── LEFT COLUMN ── */
+    .left-col {
+      width: 64%;
+      padding: 22px 24px 22px 36px;
+      border-right: 1px solid #e8eaf0;
+    }
+
+    /* ── RIGHT COLUMN ── */
+    .right-col {
+      width: 36%;
+      padding: 22px 28px 22px 20px;
+      background: #fafbfd;
+    }
+
+    /* ── SECTION ── */
+    .section { margin-bottom: 18px; }
+    .section-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #06b6d4;
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid #e0f7fc;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .section-title::before {
+      content: '';
+      width: 3px; height: 12px;
+      background: #06b6d4;
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    /* ── EXPERIENCE ENTRY ── */
+    .entry { margin-bottom: 13px; }
+    .entry-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2px; }
+    .entry-title { font-size: 13px; font-weight: 600; color: #1a1a2e; }
+    .entry-date {
+      font-size: 10.5px;
+      color: #06b6d4;
+      font-weight: 500;
+      white-space: nowrap;
+      background: rgba(6,182,212,0.08);
+      padding: 1px 7px;
+      border-radius: 10px;
+    }
+    .entry-sub { font-size: 11.5px; color: #5a5a8a; font-weight: 500; margin-bottom: 4px; }
+    .entry-badge {
+      display: inline-block;
+      font-size: 10px; font-weight: 600;
+      padding: 1px 7px; border-radius: 10px;
+      margin-bottom: 4px;
+    }
+    .badge-paid   { background: rgba(249,115,22,0.1); color: #f97316; border: 1px solid rgba(249,115,22,0.3); }
+    .badge-intern { background: rgba(6,182,212,0.1);  color: #06b6d4; border: 1px solid rgba(6,182,212,0.3); }
+    .badge-train  { background: rgba(16,185,129,0.1); color: #10b981; border: 1px solid rgba(16,185,129,0.3); }
+
+    .entry ul { padding-left: 0; list-style: none; }
+    .entry ul li {
+      font-size: 12px;
+      color: #3a3a5a;
+      padding: 1.5px 0 1.5px 12px;
+      position: relative;
+    }
+    .entry ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #06b6d4;
+      font-size: 10px;
+      top: 2px;
+    }
+
+    /* ── CHIPS ── */
+    .chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+    .chip {
+      font-size: 10px; font-weight: 500;
+      padding: 2px 7px; border-radius: 10px;
+      background: #f0f4ff; color: #4a5280;
+      border: 1px solid #dde3f5;
+    }
+    .chip-cyan   { background: rgba(6,182,212,0.08);  color: #0891b2; border-color: rgba(6,182,212,0.25); }
+    .chip-pink   { background: rgba(236,72,153,0.08); color: #be185d; border-color: rgba(236,72,153,0.25); }
+    .chip-green  { background: rgba(16,185,129,0.08); color: #065f46; border-color: rgba(16,185,129,0.25); }
+    .chip-purple { background: rgba(124,58,237,0.08); color: #5b21b6; border-color: rgba(124,58,237,0.25); }
+    .chip-orange { background: rgba(249,115,22,0.08); color: #9a3412; border-color: rgba(249,115,22,0.25); }
+
+    /* ── PROJECT ENTRY ── */
+    .proj-entry { margin-bottom: 11px; padding-bottom: 10px; border-bottom: 1px dashed #e8eaf0; }
+    .proj-entry:last-child { border-bottom: none; }
+    .proj-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px; }
+    .proj-name { font-size: 12.5px; font-weight: 600; color: #1a1a2e; }
+    .proj-tag {
+      font-size: 9.5px; font-weight: 600;
+      padding: 1px 6px; border-radius: 8px;
+    }
+    .proj-desc { font-size: 11.5px; color: #4a4a6a; margin-bottom: 4px; line-height: 1.45; }
+
+    /* ── SKILLS ── */
+    .skill-row { margin-bottom: 8px; }
+    .skill-label { font-size: 10.5px; font-weight: 600; color: #3a3a5a; margin-bottom: 3px; }
+
+    /* ── EDU ENTRY ── */
+    .edu-entry { margin-bottom: 10px; }
+    .edu-name { font-size: 12.5px; font-weight: 600; color: #1a1a2e; }
+    .edu-inst { font-size: 11px; color: #5a5a8a; }
+    .edu-meta { font-size: 10.5px; color: #06b6d4; font-weight: 500; margin-top: 1px; }
+
+    /* ── HACKATHONS ── */
+    .hack-item { display: flex; gap: 8px; margin-bottom: 7px; align-items: flex-start; }
+    .hack-year {
+      font-size: 9.5px; font-weight: 700;
+      background: linear-gradient(135deg, #06b6d4, #7c3aed);
+      color: white; padding: 2px 6px; border-radius: 6px;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .hack-info h4 { font-size: 11.5px; font-weight: 600; color: #1a1a2e; }
+    .hack-info p { font-size: 10.5px; color: #6a6a8a; }
+
+    /* ── ACHIEVEMENT ── */
+    .ach-item { margin-bottom: 8px; padding: 8px 10px; background: white; border-left: 3px solid #06b6d4; border-radius: 0 6px 6px 0; }
+    .ach-title { font-size: 12px; font-weight: 600; color: #1a1a2e; }
+    .ach-sub { font-size: 10.5px; color: #5a5a8a; margin-top: 1px; }
+    .ach-highlight { font-size: 10.5px; font-weight: 600; color: #06b6d4; margin-top: 2px; }
+
+    /* ── PRINT ── */
+    @media print {
+      body { background: white; }
+      .page { margin: 0; box-shadow: none; width: 100%; min-height: 100%; }
+      .print-btn { display: none; }
+    }
+
+    /* ── PRINT BUTTON ── */
+    .print-btn {
+      position: fixed; bottom: 30px; right: 30px;
+      background: linear-gradient(135deg, #06b6d4, #7c3aed);
+      color: white; border: none;
+      padding: 12px 24px; border-radius: 8px;
+      font-size: 14px; font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(6,182,212,0.4);
+      display: flex; align-items: center; gap: 8px;
+      z-index: 100;
+      transition: transform 0.2s;
+    }
+    .print-btn:hover { transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Download / Print PDF</button>
+
+<div class="page">
+
+  <!-- ══ HEADER ══ -->
+  <div class="header">
+    <div class="header-top">
+      <div class="header-name">
+        <h1>Sravya Sri <span>Sodasani</span></h1>
+        <div class="tagline">Data Science · Machine Learning · AI Products · Analytics</div>
+      </div>
+      <div class="header-contact">
+        <span><span class="contact-dot"></span> +91 9063934713</span>
+        <a href="mailto:sravyasrisodasani@gmail.com"><span class="contact-dot"></span> sravyasrisodasani@gmail.com</a>
+        <a href="https://linkedin.com/in/sravyasrisodasani"><span class="contact-dot"></span> linkedin.com/in/sravyasrisodasani</a>
+        <a href="https://github.com/sravyasrisodasani"><span class="contact-dot"></span> github.com/sravyasrisodasani</a>
+      </div>
+    </div>
+    <div class="header-roles">
+      <span class="role-pill">Data Science Student</span>
+      <span class="role-pill">ML Engineer</span>
+      <span class="role-pill">AI Product Builder</span>
+      <span class="role-pill">Power BI Developer</span>
+      <span class="role-pill">Hackathon Finalist</span>
+    </div>
+  </div>
+
+  <!-- ══ BODY ══ -->
+  <div class="body">
+
+    <!-- ══ LEFT COLUMN ══ -->
+    <div class="left-col">
+
+      <!-- OBJECTIVE -->
+      <div class="section">
+        <div class="section-title">Objective</div>
+        <p style="font-size:12px;color:#3a3a5a;line-height:1.6;">
+          Aspiring Data Scientist & AI product builder with hands-on experience in NLP, machine learning, Power BI analytics, and full-stack development. Proven track record of building production-level ML models, analytics dashboards, real-world client projects, and AI products in competitive hackathons. Seeking roles in Data Science, ML Engineering, Analytics, or AI development.
+        </p>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="section">
+        <div class="section-title">Experience</div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Web Developer</div>
+            <span class="entry-date">2025 – 2026</span>
+          </div>
+          <div class="entry-sub">Mee Panthulu — Pooja Booking Platform</div>
+          <span class="entry-badge badge-paid">Paid Client Project</span>
+          <ul>
+            <li>Built full-stack pooja booking platform supporting 4 languages (Telugu, Hindi, Tamil, English)</li>
+            <li>Developed React + Vite frontend with Tailwind CSS; Node.js + Express backend; PostgreSQL (Neon) database</li>
+            <li>Implemented JWT authentication, admin panel, printable booking receipts</li>
+            <li>Deployed on Vercel (frontend), Render (backend), Neon (database)</li>
+          </ul>
+          <div class="chips">
+            <span class="chip chip-cyan">React</span><span class="chip chip-cyan">Node.js</span>
+            <span class="chip chip-cyan">PostgreSQL</span><span class="chip chip-cyan">JWT</span>
+            <span class="chip chip-cyan">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div class="entry-title">ML / NLP Intern</div>
+            <span class="entry-date">Nov 2025 – Apr 2026</span>
+          </div>
+          <div class="entry-sub">AptPath — Virtual Internship</div>
+          <span class="entry-badge badge-intern">Internship</span>
+          <ul>
+            <li>Built Hate Speech Detection model — NLP pipeline with TF-IDF + Logistic Regression achieving ~96% accuracy</li>
+            <li>Applied text preprocessing: tokenization, stopword removal, lemmatization</li>
+            <li>Currently developing Voxform AI project</li>
+          </ul>
+          <div class="chips">
+            <span class="chip chip-pink">Python</span><span class="chip chip-pink">NLP</span>
+            <span class="chip chip-pink">TF-IDF</span><span class="chip chip-pink">Scikit-learn</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Cloud & DevOps Training</div>
+            <span class="entry-date">Nov 2024 – Apr 2025</span>
+          </div>
+          <div class="entry-sub">SVGS — Industrial Training (Offline)</div>
+          <span class="entry-badge badge-train">Industrial Training</span>
+          <ul>
+            <li>AWS services, cloud deployment strategies, CI/CD pipeline fundamentals</li>
+          </ul>
+          <div class="chips">
+            <span class="chip chip-green">AWS</span><span class="chip chip-green">Cloud</span><span class="chip chip-green">CI/CD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="section">
+        <div class="section-title">Key Projects</div>
+
+        <div class="proj-entry">
+          <div class="proj-header">
+            <span class="proj-name">StartupIQ AI</span>
+            <span class="proj-tag chip-cyan chip">AI Product · SummerSaaS 2026</span>
+          </div>
+          <p class="proj-desc">AI-powered startup intelligence platform — validates any idea in 60 seconds. 8 modules: market analysis, competitor mapping (bubble chart), RiskLens AI, India heatmap, originality check, investor connect, AI copilot. Score: 96/100. Grand Finale Top 5.</p>
+          <div class="chips">
+            <span class="chip chip-cyan">Next.js</span><span class="chip chip-cyan">FastAPI</span>
+            <span class="chip chip-cyan">Google Gemini</span><span class="chip chip-cyan">Python</span><span class="chip chip-cyan">React</span>
+          </div>
+        </div>
+
+        <div class="proj-entry">
+          <div class="proj-header">
+            <span class="proj-name">RoadSoS — Emergency Response AI</span>
+            <span class="proj-tag chip-pink chip">IIT Madras · National Hackathon</span>
+          </div>
+          <p class="proj-desc">AI-powered road safety platform — instant accident reporting, live GPS sharing, hospital recommendations, emergency contact alerts. Built for National Road Safety Hackathon 2026 (IIT Madras, CoERS & RBG Labs).</p>
+          <div class="chips">
+            <span class="chip chip-pink">React</span><span class="chip chip-pink">Firebase</span>
+            <span class="chip chip-pink">Maps API</span><span class="chip chip-pink">Python</span>
+          </div>
+        </div>
+
+        <div class="proj-entry">
+          <div class="proj-header">
+            <span class="proj-name">Spam Classifier · Movie Recommender · Health Advisor</span>
+            <span class="proj-tag chip-green chip">ML Projects</span>
+          </div>
+          <p class="proj-desc">Email/SMS spam detector (97–98% accuracy, Naive Bayes + TF-IDF + Streamlit) · Movie recommendation using cosine similarity on 5000+ TMDB films · Personalized Health Advisor using Random Forest (Diploma Major Project).</p>
+          <div class="chips">
+            <span class="chip chip-green">Python</span><span class="chip chip-green">Scikit-learn</span>
+            <span class="chip chip-green">Streamlit</span><span class="chip chip-green">Pandas</span><span class="chip chip-green">NLP</span>
+          </div>
+        </div>
+
+        <div class="proj-entry">
+          <div class="proj-header">
+            <span class="proj-name">Global Ripple Effects — Power BI Dashboard</span>
+            <span class="proj-tag chip-orange chip">Decode & Display · TVASTR'26</span>
+          </div>
+          <p class="proj-desc">5-page interactive dashboard on America-Iran War economic impact across 28 countries. Oil +84%, Net loss -$2,826B, Wheat +104%. 12 DAX measures, 5 datasets, solo submission. Live technical presentation to expert panel.</p>
+          <div class="chips">
+            <span class="chip chip-orange">Power BI</span><span class="chip chip-orange">DAX</span>
+            <span class="chip chip-orange">Python</span><span class="chip chip-orange">SQL</span>
+          </div>
+        </div>
+
+        <div class="proj-entry">
+          <div class="proj-header">
+            <span class="proj-name">Smart Add-On Recommender</span>
+            <span class="proj-tag chip-pink chip">Zomathon · ML System Design</span>
+          </div>
+          <p class="proj-desc">Context-aware two-stage LightGBM ranking pipeline for food delivery add-on recommendations. Synthetic dataset of 75K orders. Precision@8 improved 0.12→0.20. Projected ₹18M/day revenue lift.</p>
+          <div class="chips">
+            <span class="chip chip-pink">LightGBM</span><span class="chip chip-pink">Python</span>
+            <span class="chip chip-pink">Feature Engineering</span><span class="chip chip-pink">Pandas</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ══ RIGHT COLUMN ══ -->
+    <div class="right-col">
+
+      <!-- EDUCATION -->
+      <div class="section">
+        <div class="section-title">Education</div>
+
+        <div class="edu-entry">
+          <div class="edu-name">B.Tech — CS (Data Science)</div>
+          <div class="edu-inst">G. Narayanamma Institute of Technology & Science, Hyderabad</div>
+          <div class="edu-meta">2025 – 2028</div>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-name">Diploma — AI & Machine Learning</div>
+          <div class="edu-inst">Government Institute of Electronics, Hyderabad</div>
+          <div class="edu-meta">2022 – 2025 · CGPA: 9.54</div>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-name">Secondary School Education</div>
+          <div class="edu-inst">Blooming Dales High School</div>
+          <div class="edu-meta">2025 · CGPA: 9.8</div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="section">
+        <div class="section-title">Technical Skills</div>
+
+        <div class="skill-row">
+          <div class="skill-label">Programming</div>
+          <div class="chips">
+            <span class="chip chip-cyan">Python</span><span class="chip chip-cyan">SQL</span>
+            <span class="chip chip-cyan">Java</span><span class="chip chip-cyan">JavaScript</span><span class="chip chip-cyan">C</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Machine Learning</div>
+          <div class="chips">
+            <span class="chip chip-pink">Scikit-learn</span><span class="chip chip-pink">Pandas</span>
+            <span class="chip chip-pink">NumPy</span><span class="chip chip-pink">NLP</span>
+            <span class="chip chip-pink">LightGBM</span><span class="chip chip-pink">TF-IDF</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Analytics & BI</div>
+          <div class="chips">
+            <span class="chip chip-green">Power BI</span><span class="chip chip-green">DAX</span>
+            <span class="chip chip-green">Excel</span><span class="chip chip-green">Matplotlib</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Tools & Platforms</div>
+          <div class="chips">
+            <span class="chip chip-purple">Streamlit</span><span class="chip chip-purple">FastAPI</span>
+            <span class="chip chip-purple">React</span><span class="chip chip-purple">Git</span>
+            <span class="chip chip-purple">Figma</span><span class="chip chip-purple">Jupyter</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACHIEVEMENTS -->
+      <div class="section">
+        <div class="section-title">Achievements</div>
+
+        <div class="ach-item">
+          <div class="ach-title">SummerSaaS 2026 — Grand Finale</div>
+          <div class="ach-sub">BITS Pilani · Team: Hack Storm</div>
+          <div class="ach-highlight">Top 5 · Score 96/100 · 3800+ registrations</div>
+        </div>
+
+        <div class="ach-item">
+          <div class="ach-title">Decode & Display — TVASTR'26</div>
+          <div class="ach-sub">SMS, University of Hyderabad · Solo</div>
+          <div class="ach-highlight">Live presentation · 3 rounds · Expert panel</div>
+        </div>
+
+        <div class="ach-item">
+          <div class="ach-title">National Road Safety Hackathon</div>
+          <div class="ach-sub">IIT Madras · CoERS & RBG Labs</div>
+          <div class="ach-highlight">Results awaited · AI in Road Safety theme</div>
+        </div>
+
+        <div class="ach-item">
+          <div class="ach-title">Diploma CGPA: 9.54</div>
+          <div class="ach-sub">AI & ML · Govt. Institute of Electronics</div>
+          <div class="ach-highlight">SSC CGPA: 9.8</div>
+        </div>
+      </div>
+
+      <!-- HACKATHONS -->
+      <div class="section">
+        <div class="section-title">Hackathons (8)</div>
+
+        <div class="hack-item">
+          <span class="hack-year">2026</span>
+          <div class="hack-info"><h4>Build Beyond Limits — Amazon</h4><p>Valkey · Offline · Amazon HYD13</p></div>
+        </div>
+        <div class="hack-item">
+          <span class="hack-year">2026</span>
+          <div class="hack-info"><h4>SummerSaaS — BITS Pilani</h4><p>StartupIQ AI · Top 5 Finals</p></div>
+        </div>
+        <div class="hack-item">
+          <span class="hack-year">2026</span>
+          <div class="hack-info"><h4>Road Safety Hackathon — IIT Madras</h4><p>RoadSoS AI · Online</p></div>
+        </div>
+        <div class="hack-item">
+          <span class="hack-year">2026</span>
+          <div class="hack-info"><h4>Yuvaan — IIT Hyderabad</h4><p>Intelli Credit · FinTech · XAI</p></div>
+        </div>
+        <div class="hack-item">
+          <span class="hack-year">2026</span>
+          <div class="hack-info"><h4>Decode & Display — TVASTR'26</h4><p>Power BI · Solo · 3 Rounds</p></div>
+        </div>
+        <div class="hack-item">
+          <span class="hack-year">2026</span>
+          <div class="hack-info"><h4>Zomathon · Power BI Hackathon</h4><p>ML RecSys · Power BI · GNITS</p></div>
+        </div>
+        <div class="hack-item">
+          <span class="hack-year">2025</span>
+          <div class="hack-info"><h4>NASA Space Apps Challenge</h4><p>24hr · Waste Management · GNITS</p></div>
+        </div>
+      </div>
+
+      <!-- WORKSHOPS -->
+      <div class="section">
+        <div class="section-title">Workshops & Events</div>
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <div style="font-size:11px;color:#3a3a5a;">▸ <strong>React Hyderabad Meetup #5</strong> — Valkey & AI Apps</div>
+          <div style="font-size:11px;color:#3a3a5a;">▸ <strong>Power BI Bootcamp</strong> — 4-Day Intensive</div>
+          <div style="font-size:11px;color:#3a3a5a;">▸ <strong>Figma Workshop</strong> — UI/UX Prototyping</div>
+          <div style="font-size:11px;color:#3a3a5a;">▸ <strong>Java Bootcamp</strong> — Core Java & OOP (3 days)</div>
+          <div style="font-size:11px;color:#3a3a5a;">▸ <strong>Women's Leadership Conclave 2026</strong></div>
+          <div style="font-size:11px;color:#3a3a5a;">▸ <strong>Idea to Prototype</strong> — UIUX Hyderabad</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
